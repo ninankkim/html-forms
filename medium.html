@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"href="forms.css">
+</head>
+<body>
+    <!-- SMALL EXERCISES -->
+    <form>
+        <div>
+        <fieldset>
+        <h1>LOG IN</h1>
+        <label for = "firstname" >First Name</label>
+        <input type = "text" name = "firstname" id="firstname" required/>
+        <p>
+        </p>
+        <label for = "lastname" >Last Name</label>
+        <input type = "text" name = "lastname" id="lastname" required/>
+        <p></p>
+        <label for = "age" >Age</label>
+        <input type = "text" name = "age" id="age" pattern="^(?:100|[1-9]?[0-9])$" title="Please enter number 0-100" required/>
+        <p></p>
+        <label for = "username" >Username</label>
+        <input type = "text" name = "username" id="username" maxlength="15" alert="Username may not be over 15 charachters" required/>
+        <p></p>
+        <button type = "submit">Submit</button>
+        <button type = "reset">Reset</button>
+    </fieldset>
+    </div>

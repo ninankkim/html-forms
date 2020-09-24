@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PizzaShack</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="validation.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>PizzaShack</h1>
+    <form id="orderForm">
+    <fieldset class="form-group">
+        <legend class="col-form-label">Customize Your Pizza</legend>
+        <div class="form-group">
+        <label for="crust">Type of Crust</label>
+        <select name="crust" id="crust" class="custom-select">
+            <option value="" selected disabled>Please Select an option</option>
+            <option value="thin">Thin</option>
+            <option value="stuffed">Stuffed Crust</option>
+            <option value="thick">Thick Crust</option>
+            <option value="deeppan">Deep Pan</option>
+            <option value="woodfire">Wood Fired Crust</option>
+            <option value="cheese">Cheese Crust</option>
+            <option value="garlic">Garlic Crust</option>
+            <option value="glutenfree">Gluten Free</option>
+        </select>
+        </div>
+        
+        <div class="card">
+        <div class="card-body">
+            <div class="form-check">
+            <input type="checkbox" class="form-check-input" name="toppings" id="grilledChicken" value="grilledChicken">
+            <label for="grilledChicken" class="form-check-label">Grilled Chicken</label>
+            </div>
+
+            <div class="form-check">
+            <input type="checkbox" class="form-check-input" name="toppings" id="pepperoni" value="pepperoni">
+            <label for="pepperoni"class="form-check-label">Pepperoni</label>
+            </div>
+            
+            <div class="form-check">
+            <input type="checkbox" class="form-check-input" name="toppings" id="cheese" value="cheese">
+            <label for="cheese"class="form-check-label">Cheese</label>
+            </div>
+        </div>
+        </div>
+
+        <div class="form-group">
+        <label for="numberOfPizza">Number of Pizzas</label>
+        <input type="number" step="1000" min="1" max="9001" class="form-control" id="numberOfPizza" name="numberOfPizza">
+        </div>
+    </fieldset>
+    
+            
+    <fieldset>
+        <legend>Order Type</legend>
+        <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" id="delivery" value="delivery" name="orderType">
+        <label for="delivery" class="form-check-label">Delivery</label>
+        </div>
+        <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" id="pickUp" value="pickUp" name="orderType">
+        <label for="pickUp" class="form-check-label">Pick Up</label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Contact Information</legend>
+
+        <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name">
+        </div>
+
+        <div class="form-group">
+        <label for="inputAddress">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+        <label for="inputAddress2">Address 2</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control">
+            <option selected disabled value="">Choose...</option>
+            <option>...</option>
+            </select>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" title="Please enter a valid zip code (23456 or 12345-123)" class="form-control" id="inputZip" pattern="^\(?\d{5}\)?([-]\d{3})?$" >
+        </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <legend>Additional Information</legend>
+        <label for="instructions">Order Instructions</label><br>
+        <textarea class="form-control" name="instructions" id="instructions"></textarea>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <legend>Payment Information</legend>
+        <div class="form-group">
+        <label for="ccName">Name</label>
+        <input type="text" class="form-control" id="ccName" name="ccName">
+        </div>
+
+        <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input type="tel" class="form-control" id="cardNumber" name="cardNumber" pattern="(^4[0-9]{12}(?:[0-9]{3})?$)|(^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$)|(3[47][0-9]{13})|(^3(?:0[0-5]|[68][0-9])[0-9]{11}$)|(^6(?:011|5[0-9]{2})[0-9]{12}$)|(^(?:2131|1800|35\d{3})\d{11}$)">
+        </div>
+
+        <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="expiry">Expiry</label>
+            <input type="month" class="form-control" id="expiry" name="expiry">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="ccv">Security Code</label>
+            <input type="tel" class="form-control" id="ccv" name="ccv">
+        </div>
+        </div>
+    </fieldset>
+
+    <button id="submitButton" type="submit" class="btn btn-primary">Gimme Pizza</button>
+    </form>
+</div>
+</body>
+</html>

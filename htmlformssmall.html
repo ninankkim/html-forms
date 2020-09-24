@@ -1,0 +1,48 @@
+<form>
+    <fieldset>
+        <legend>
+            I mean, just type something in the boxes!
+        </legend>
+        <div>
+            <label for="text">Text</label>
+            <input type="text" id="textbox" name="text">
+        </div>
+        <div>
+            <label for="text">More Text</label>
+            <input type="text" id="moretextbox" name="texts">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            Which do you prefer to eat, Thai food or sushi?
+        </legend>
+        <p>
+            <label> <input type="radio" id = "yes" name="question" value ="yes" checked /> Thai </label>
+        </p>
+        <p>
+            <label><input type="radio" id= "no" name = "question" value="no" /> Sushi </label>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            Let me know, what's your favorite genre of music?
+        </legend>
+        <label for="genre-select"> What's Your favorite music genre? </label>
+        <select name="genre" id="genre-select">
+        <option value="" disabled selected>--Choose from the dropdown list below--</option>
+        <option value="action">Rock</option>
+        <option value="adventure">Country</option>
+        <option value="comedy">R&B</option>
+        <option value="documentary">LO-FI</option>
+        <option value="horror">Hip-Hop</option>
+        <option value="mystery">Pop</option>
+        <option value="Anime">EDM</option>
+        </select>
+    </fieldset>
+
+    <button type="submit" value="Submit">Submit</button>
+    <button type="reset" value="Reset">Reset</button>
+
+</form>
